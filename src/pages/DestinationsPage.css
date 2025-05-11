@@ -1,0 +1,77 @@
+/* src/pages/DestinationsPage.css */
+.destinations-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .destinations-container h1 {
+      color: #003366;
+      margin-bottom: 10px;
+  }
+  
+  .destinations-container p {
+      color: #555;
+      font-size: 1.1em;
+      margin-bottom: 30px;
+  }
+  
+  .destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 25px; /* Space between cards */
+    max-width: 1200px;
+    margin: 0 auto; /* Center the grid */
+  }
+  
+  .destination-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden; /* Hide image overflow */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    display: flex;
+    flex-direction: column; /* Stack image, text, button */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .destination-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .destination-card img {
+    width: 100%;
+    height: 180px; /* Fixed height for images */
+    object-fit: cover; /* Crop image to fit */
+    display: block; /* Remove extra space below image */
+  }
+  
+  .destination-card h3 {
+    color: #003366;
+    font-size: 1.3em;
+    margin: 15px 15px 5px 15px;
+  }
+  
+  .destination-card p {
+    color: #666;
+    font-size: 0.95em;
+    margin: 0 15px 15px 15px;
+    flex-grow: 1; /* Allow description to fill space */
+  }
+  
+  .explore-flights-button {
+      display: block; /* Make link a block element */
+      background-color: #007bff;
+      color: white;
+      padding: 10px 15px;
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.2s ease;
+      margin-top: auto; /* Push button to the bottom */
+  }
+  
+   .explore-flights-button:hover {
+       background-color: #0056b3;
+       text-decoration: none;
+   }

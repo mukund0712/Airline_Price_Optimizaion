@@ -1,0 +1,139 @@
+/* src/pages/ComparePage.css */
+.compare-container {
+    padding: 20px;
+    text-align: center; /* Center main title */
+  }
+  
+   .compare-container h1 {
+     color: #003366;
+     margin-bottom: 10px;
+      display: flex; /* Align icon and text */
+      justify-content: center;
+      align-items: center;
+   }
+  
+   .compare-container h1 svg {
+      margin-right: 10px;
+      color: #ff6600; /* Orange icon */
+   }
+  
+   .compare-container p {
+      color: #555;
+      font-size: 1.1em;
+      margin-bottom: 30px;
+   }
+  
+  .compare-table-wrapper {
+      max-width: 1000px; /* Max width for the table */
+      margin: 0 auto 30px auto; /* Center table and add space below */
+      overflow-x: auto; /* Add horizontal scroll on small screens */
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .compare-table {
+    width: 100%; /* Table takes full width of wrapper */
+    border-collapse: collapse; /* Remove space between borders */
+    text-align: left;
+     min-width: 600px; /* Ensure table has minimum width for scrolling */
+  }
+  
+  .compare-table th,
+  .compare-table td {
+    border: 1px solid #ddd;
+    padding: 12px 15px; /* Add padding */
+  }
+  
+  .compare-table th {
+    background-color: #f2f2f2; /* Light grey background for headers */
+    color: #003366; /* Dark blue text */
+    font-weight: bold;
+    text-align: center; /* Center flight headers */
+  }
+  
+  .compare-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Zebra striping for rows */
+  }
+  
+  .compare-table tbody tr:hover {
+    background-color: #e9e9e9; /* Highlight row on hover */
+  }
+  
+   /* Style for the first column (Feature) */
+  .compare-table td:first-child {
+      font-weight: bold;
+      color: #0056b3; /* Medium blue */
+       background-color: #f2f2f2; /* Match header background */
+  }
+  
+   .feature-label {
+       display: flex;
+       align-items: center;
+   }
+   .feature-label svg {
+       margin-right: 8px;
+       color: #003366;
+   }
+  
+  .compare-actions {
+      text-align: center;
+      margin-top: 20px;
+  }
+   .compare-actions button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.3s ease;
+  }
+  
+   .compare-actions .primary-button {
+      background-color: #007bff; /* Blue */
+      color: white;
+  }
+  .compare-actions .primary-button:hover {
+      background-color: #0056b3;
+  }
+  
+  .compare-actions .secondary-button {
+       background-color: #6c757d; /* Grey */
+       color: white;
+  }
+  .compare-actions .secondary-button:hover {
+       background-color: #5a6268;
+  }
+  .compare-table td.highlight-best {
+    background-color: #d4edda; /* Light green background */
+    color: #155724; /* Dark green text */
+    font-weight: bold;
+    font-size: 1.1em;
+     position: relative; /* For potential icon/badge */
+}
+ /* Optional: Add a subtle border or icon */
+ .compare-table td.highlight-best::after {
+     content: '👍'; /* Or use an icon font */
+     position: absolute;
+     top: 5px;
+     right: 5px;
+     font-size: 0.8em;
+ }
+
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+      .compare-table-wrapper {
+          padding: 10px; /* Reduce padding on smaller screens */
+      }
+       .compare-table th,
+       .compare-table td {
+           padding: 10px; /* Reduce cell padding */
+           font-size: 0.9em; /* Reduce font size */
+       }
+       .compare-table th {
+           min-width: 120px; /* Ensure columns have minimum width */
+       }
+  }

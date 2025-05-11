@@ -1,0 +1,36 @@
+/* src/App.css */
+/* This file can be used for layout or theme styles that apply to the whole app */
+
+/* Ensure the App container manages flex correctly */
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Make sure the app takes at least full viewport height */
+  }
+  
+  main {
+      flex-grow: 1; /* Make main content area grow */
+      /* Remove max-width and margin auto from main if you want components inside to control their own width/centering */
+      /* Or keep it here and components use 100% width */
+      /* Let's keep it in main for consistency with Part 1 */
+       padding: 20px;
+       max-width: 1200px; /* Limit content width */
+       margin: 0 auto; /* Center content */
+       width: 100%; /* Ensure it takes full width up to max-width */
+       box-sizing: border-box; /* Include padding in width calculation */
+  }
+  
+  /* Subtle Gradient Background */
+  body {
+      /* Keep existing font/margin styles */
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      /* Subtle Sky/Horizon Gradient */
+      background: linear-gradient(to bottom, #e0f7fa, #b3e5fc); /* Light blue to slightly darker blue */
+      background-attachment: fixed; /* Keep background fixed when scrolling */
+      color: #333;
+  }

@@ -1,0 +1,207 @@
+/* src/pages/HomePage.css */
+
+.homepage-container {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .hero-section {
+    margin-bottom: 40px;
+  }
+
+  .homepage-container h1 {
+     color: #003366; /* Dark blue */
+     font-size: 2.5em;
+     margin-bottom: 10px;
+  }
+
+  .homepage-container p {
+     color: #555;
+     font-size: 1.2em;
+     margin-bottom: 20px;
+  }
+
+  .search-section {
+    background-color: #e0f2f7; /* Light blue background for search section */
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Slightly wider */
+    margin: 20px auto; /* Center the search section */
+    position: relative; /* Needed for potential absolute positioning of elements inside if required */
+  }
+
+  .search-section h2 {
+      color: #003366; /* Dark blue */
+      margin-top: 0;
+      margin-bottom: 25px;
+      font-size: 1.8em;
+  }
+
+  /* Style for icons within labels */
+  .form-group label svg {
+      margin-right: 8px; /* Space between icon and text */
+      vertical-align: middle; /* Align icon vertically with text */
+      color: #0056b3; /* Match label color */
+  }
+
+  /* Style for icon in the search section title */
+  .search-section h2 svg {
+       margin-right: 10px;
+       vertical-align: middle;
+       color: #003366;
+  }
+
+
+  .flight-search-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between form groups */
+  }
+
+  .flight-search-form .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flight-search-form label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #0056b3; /* Medium blue */
+    text-align: left; /* Align label text to the left */
+  }
+
+  .flight-search-form input[type="text"],
+  .flight-search-form input[type="date"],
+  .flight-search-form input[type="number"] {
+    width: 100%; /* Full width within its grid cell */
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding and border in element's total width */
+    font-size: 1em;
+  }
+
+  .flight-search-form button[type="submit"] {
+    /* On smaller screens, button spans one column */
+    grid-column: span 1; /* Changed to span 1 to match typical grid-template-columns */
+    background-color: #ff6600; /* Orange button */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Add space above the button */
+    justify-self: center; /* Center the button horizontally within its grid cell */
+  }
+
+  .flight-search-form button[type="submit"]:hover {
+    background-color: #e65c00; /* Darker orange on hover */
+  }
+
+  /* Adjust button width and span for wider screens */
+  @media (min-width: 600px) {
+    .flight-search-form button[type="submit"] {
+      grid-column: span 2; /* Span 2 columns on wider screens */
+      max-width: 300px; /* Limit button width */
+      margin: 10px auto 0 auto; /* Center the button within the span */
+    }
+     .flight-search-form {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Slightly wider min-width for form groups */
+     }
+  }
+
+
+  /* --- Search Results Section Styles (Updated) --- */
+  .search-results-section { /* Changed class name from placeholder */
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      max-width: 800px; /* Match search section width */
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center; /* Center title and compare button */
+  }
+
+  /* Style for the H2 title in the search results section */
+  .search-results-section h2 {
+      color: #003366;
+      text-align: center;
+      margin-bottom: 20px;
+      display: flex; /* Align icon and text */
+      justify-content: center; /* Center the content horizontally */
+      align-items: center; /* Center the content vertically */
+      font-size: 1.8em; /* Ensure consistency with other h2s */
+  }
+
+  /* Style for the icon within the search results H2 */
+  .search-results-section h2 svg {
+      margin-right: 10px;
+      color: #0056b3; /* Match label color or a suitable blue */
+  }
+
+  /* Container for the list of flight cards */
+  .flight-list {
+      list-style: none; /* Remove default list styling */
+      padding: 0;
+      margin: 0 0 20px 0; /* Space below the list before the button */
+      display: grid; /* Use grid for layout of cards if needed, or flex, or just let them stack */
+      gap: 15px; /* Space between cards if using grid/flex */
+      /* If you want cards to stack vertically with space: */
+      /* display: block; */ /* Ensure it behaves like a block container */
+  }
+
+  /* Note: Styles for individual flight cards are expected to be in FlightCard.css */
+  /* The .flight-card elements are now children of .flight-list */
+
+
+  /* Compare Button */
+  .compare-button {
+    background-color: #ff6600; /* Orange */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    margin-top: 10px;
+  }
+
+  .compare-button:hover:not(:disabled) {
+    background-color: #e65c00; /* Darker orange */
+  }
+
+  .compare-button:disabled {
+      background-color: #cccccc; /* Grey */
+      cursor: not-allowed;
+      opacity: 0.7;
+  }
+
+  /* Basic style for other sections like "Explore destinations" */
+  .other-sections {
+      margin-top: 40px;
+      padding: 20px;
+      /* Optional: add background/border if it becomes a distinct section */
+  }
+
+  .other-sections p {
+      font-size: 1.1em;
+      color: #555; /* Match body text color */
+  }
+
+  .other-sections a {
+      color: #0056b3; /* Use a standard link color */
+      font-weight: bold;
+      text-decoration: none; /* Remove underline */
+      transition: color 0.3s ease;
+  }
+
+  .other-sections a:hover {
+      color: #003366; /* Darker color on hover */
+      text-decoration: underline; /* Add underline on hover */
+  }

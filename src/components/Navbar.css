@@ -1,0 +1,63 @@
+/* src/components/Navbar.css */
+.navbar {
+    background-color: #003366; /* Dark blue background */
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .navbar .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .site-title {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links a {
+    color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover,
+  .nav-links a.active { /* .active class added by NavLink when the route matches */
+    color: white;
+    text-decoration: underline;
+  }
+
+  .nav-logout-button {
+    background: none; /* Remove button background */
+    border: none; /* Remove border */
+    color: rgba(255, 255, 255, 0.8); /* Match link color */
+    cursor: pointer;
+    font-size: 1em; /* Match link font size */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    transition: color 0.3s ease;
+}
+
+.nav-logout-button:hover {
+    color: white; /* Match link hover color */
+    text-decoration: underline; /* Add underline on hover */
+}
